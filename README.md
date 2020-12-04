@@ -1,8 +1,22 @@
-# Vue3系统入门到项目实战
+# Step1: Vue.js(3.0)零基础入门
 
-课程地址：
-<https://coding.imooc.com/learn/list/472.html\>
+**课程地址：**
+<https://coding.imooc.com/learn/list/472.html>
 
-## Vue.js 从入门到精通（含Vue3.0正式版）
+**学习目标：**
 
-学习路线中的第一个项目
+掌握 Vue.js的基础语法以及常见 API
+
+**课程重点：**
+
+1. Vue 核心技术，常用 API 精讲
+2. 掌握 Vue 框架的生命周期
+3. 深入理解 Vue 框架的组件化
+4. 理解 Vue 中的 CSS 动画原理与使用
+5. 如何编写高质量的可维护代码
+
+* `常用API`
+* `组件化`
+* `Vue 中的高级扩展语法`
+* `Composition API`
+* `Vue 生态全家桶`
