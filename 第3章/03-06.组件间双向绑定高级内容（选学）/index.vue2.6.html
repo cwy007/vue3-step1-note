@@ -4,33 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>lesson 19</title>
-  <script src="https://unpkg.com/vue@next"></script>
-  <!-- <script src="https://unpkg.com/vue@2.6"></script> -->
+  <!-- <script src="https://unpkg.com/vue@next"></script> -->
+  <script src="https://unpkg.com/vue@2.6"></script>
 </head>
 <body>
   <div id="root"></div>
 </body>
 <script>
-  const app = Vue.createApp({
-    data() {
-      return {
-        count: 'a',
-      }
-    },
-    template: `
-      <counter v-model.uppercase="count" />
-    `
-  });
-
-  app.component('counter', {
+  Vue.component('counter', {
     props: {
       'modelValue': String,
       'modelModifiers': {
         default: ()=> ({})
       }
-    },
-    mounted() {
-        console.log(this.modelModifiers)
     },
     methods: {
       handleClick() {
@@ -46,6 +32,16 @@
     `
   });
 
-  const vm = app.mount('#root');
+  const vm = new Vue({
+    data() {
+      return {
+        count: '1',
+      }
+    },
+    template: `
+      <counter v-model.uppercase="count" />
+    `
+  }).$mount('#root');
+
 </script>
 </html>
