@@ -20,3 +20,7 @@
 * `Vue 中的高级扩展语法`
 * `Composition API`
 * `Vue 生态全家桶`
+
+## 参考
+
+* [proxy](https://es6.ruanyifeng.com/#docs/proxy)
