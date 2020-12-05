@@ -8,8 +8,9 @@ watch 监听器
 
 {
   setup() {
-    const { ref, reactive,  toRefs } = Vue;
-    const nameObj = reactive({name: 'dell'});
+    // warchEffect 也是监听器，偏向于 effect
+    const { ref, reactive,  toRefs, watchEffect } = Vue;
+    const nameObj = reactive({name: 'dell', name2: 'lee'});
 
     // watch 函数监听数据变化
     // 在setup函数中
@@ -24,8 +25,32 @@ watch 监听器
     //   console.log(currentValue, prevValue);
     // })
     // 可以监听多个数据的变化，用一个监听器承载
-    watch([() => nameObj.name, () => nameObj.name2], ([currentValue, currentValue2], [prevValue, prevValue2]) => {
+    const stop1 = watch([() => nameObj.name, () => nameObj.name2], ([currentValue, currentValue2], [prevValue, prevValue2]) => {
       console.log(currentValue, prevValue);
+
+      setTimeout(() => {
+        stop1(); // 监听器失效
+      }, 5000);
+    }, { immediate: true })
+
+    // 立即执行，没有惰性 immediate
+    // 自动检查内部的代码
+    // 不需要传递你要侦听的内容，自动会感知代码依赖
+    // 不需要传递很多参数，只需要传递一个函数
+    // 无法获取之前的数据，只能获取当前的数据值
+    //
+    // 使用情景
+    // ajax
+    // effect
+    // 一般期望 setup 为纯函数
+    //
+    const stop = watchEffect(() => {
+      console.log('abc')
+      // 函数里面对 nameObj.name 有依赖
+      console.log(nameObj.name) // 自动检查内部的代码，数据变化则会执行
+      setTimeout(() => {
+        stop(); // 监听器失效
+      }, 5000);
     })
 
     const { name } = toRefs(nameObj);
@@ -37,3 +62,11 @@ watch 监听器
 }
 
 ```
+
+可以将 watch 变成非惰性，通过第三个参数传入配置信息
+
+{ immediate: true }
+
+现阶段理解的成本
+
+投入产出比
