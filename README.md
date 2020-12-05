@@ -24,3 +24,5 @@
 ## 参考
 
 * [proxy](https://es6.ruanyifeng.com/#docs/proxy)
+* [Vue事件的函数传参](https://www.cnblogs.com/apebro/p/12601323.html)
+* [【vue】@click绑定的函数，如何同时传入事件对象和自定义参数](https://www.cnblogs.com/wannananana/p/12066607.html)
