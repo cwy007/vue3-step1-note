@@ -38,6 +38,13 @@
     │   └── logo.png
     ├── components
     │   └── HelloWorld.vue
+    ├── router
+    │   └── index.js
+    ├── views
+    │   ├── About.vue
+    │   └── Home.vue
+    ├── components
+    │   └── HelloWorld.vue
     └── main.js
 ```
 

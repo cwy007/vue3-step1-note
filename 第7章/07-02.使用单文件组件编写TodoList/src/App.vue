@@ -45,6 +45,6 @@ export default {
 /* 没有 scoped，样式会作用在全局 */
   .button {
     margin-left: 20px;
-    color: red;
+    color: rgb(252, 232, 232);
   }
 </style>
