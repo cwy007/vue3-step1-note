@@ -58,6 +58,11 @@
 * [fastmock](https://www.fastmock.site)
 * <https://www.fastmock.site/mock/ae8e9031947a302fed5f92425995aa19/jd/api/user/register>
 
+## vscode plugin
+
+* eslint 代码格式
+* vetur vue 文件语法高亮
+
 ## 参考
 
 * [proxy](https://es6.ruanyifeng.com/#docs/proxy)
