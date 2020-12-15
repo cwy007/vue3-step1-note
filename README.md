@@ -25,6 +25,9 @@
 
 ```shell
 .
+├── .browserslistrc
+├── .eslintrc.js
+├── .gitignore
 ├── README.md
 ├── babel.config.js
 ├── package-lock.json
@@ -39,6 +42,8 @@
     ├── components
     │   └── HelloWorld.vue
     ├── router
+    │   └── index.js
+    ├── store
     │   └── index.js
     ├── views
     │   ├── About.vue

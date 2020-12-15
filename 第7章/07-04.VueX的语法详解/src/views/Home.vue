@@ -10,6 +10,8 @@ export default {
   name: 'Home',
   computed: {
     myName() {
+      // setup() 之外可以使用this
+      // this.$store vuex 创建的全局仓库
       return this.$store.state.name;
     }
   }
