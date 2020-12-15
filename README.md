@@ -23,6 +23,8 @@
 
 ## vue create new-project-name
 
+`tree .`
+
 ```shell
 .
 ├── .browserslistrc
@@ -48,8 +50,6 @@
     ├── views
     │   ├── About.vue
     │   └── Home.vue
-    ├── components
-    │   └── HelloWorld.vue
     └── main.js
 ```
 
