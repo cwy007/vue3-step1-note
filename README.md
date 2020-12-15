@@ -53,6 +53,11 @@
     └── main.js
 ```
 
+## mock api
+
+* [fastmock](https://www.fastmock.site)
+* <https://www.fastmock.site/mock/ae8e9031947a302fed5f92425995aa19/jd/api/user/register>
+
 ## 参考
 
 * [proxy](https://es6.ruanyifeng.com/#docs/proxy)
